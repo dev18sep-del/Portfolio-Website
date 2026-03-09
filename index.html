@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Dev Patel - Computer Science Student & Aspiring Software Engineer. Portfolio showcasing projects, skills, and learning journey." />
+    <meta name="keywords" content="Dev Patel, Computer Science, Software Engineer, Web Developer, Portfolio, India" />
+    <meta name="author" content="Dev Patel" />
+    <meta property="og:title" content="Dev Patel | Portfolio" />
+    <meta property="og:description" content="Computer Science Student & Aspiring Software Engineer" />
+    <title>Dev Patel | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ========================
+       NAVBAR
+  ======================== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Dev<span class="logo-dot">.</span><span
+                    class="logo-bracket">/&gt;</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+                <a href="#" class="btn-resume" id="resumeBtn" aria-label="Download Resume">
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    <span>Resume</span>
+                </a>
+                <div class="nav-socials">
+                    <a href="https://github.com/dev18sep-del" target="_blank" rel="noopener" aria-label="GitHub"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/devkumar-patel-7444433b5/" target="_blank" rel="noopener"
+                        aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#skills" class="mobile-link">Skills</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+            <li><a href="#experience" class="mobile-link">Experience</a></li>
+            <li><a href="#certifications" class="mobile-link">Certifications</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+        <div class="mobile-actions">
+            <a href="#" class="btn-resume-mobile">Download Resume</a>
+            <div class="mobile-socials">
+                <a href="https://github.com/dev18sep-del" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/devkumar-patel-7444433b5/" target="_blank" rel="noopener"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================
+       HERO SECTION
+  ======================== -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content fade-in">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for Internships
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="text-accent">Dev Patel</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    Computer Science Student<br />
+                    <span class="typewriter" id="typewriter"></span>
+                </h2>
+                <p class="hero-desc">
+                    A passionate CS student pursuing BTech (2023–2027). I enjoy solving problems, developing web
+                    applications, and
+                    exploring modern technologies like machine learning and backend systems.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn-secondary">Contact Me</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num">3+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">2+</span>
+                        <span class="stat-label">Years Learning</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image fade-in-right">
+                <div class="image-wrapper">
+                    <img src="hero-illustration.png" alt="Developer illustration" loading="eager" />
+                    <div class="image-decoration"></div>
+                </div>
+                <div class="floating-card card-1">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fa-brands fa-node-js"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>ML</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" aria-label="Scroll down">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ========================
+       ABOUT SECTION
+  ======================== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">A little bit about my background, interests, and goals</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        I'm <strong>Dev Patel</strong>, a Computer Science student at a private university in India,
+                        currently in my
+                        second year of a BTech program (2023–2027). From the moment I wrote my first line of code, I
+                        knew software
+                        development was where I belonged.
+                    </p>
+                    <p>
+                        My journey began with <strong>C++ and data structures</strong>, then expanded into web
+                        development —
+                        building interfaces with HTML/CSS/JS, creating REST APIs with Node.js, and working with
+                        databases like
+                        MongoDB and MySQL.
+                    </p>
+                    <p>
+                        Lately, I've been deeply interested in <strong>machine learning</strong> — specifically how
+                        predictive
+                        models can solve real-world problems like early disease detection. I love working at the
+                        intersection of
+                        data, logic, and human impact.
+                    </p>
+                    <p>
+                        My goal is to become a skilled <strong>Full Stack Software Engineer</strong> — writing clean,
+                        efficient code
+                        and contributing to products that matter.
+                    </p>
+                </div>
+                <div class="about-info reveal">
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-details">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">India</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="info-details">
+                                <span class="info-label">Degree</span>
+                                <span class="info-value">BTech Computer Science</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fa-solid fa-calendar"></i></div>
+                            <div class="info-details">
+                                <span class="info-label">Duration</span>
+                                <span class="info-value">2023 – 2027</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fa-solid fa-fire"></i></div>
+                            <div class="info-details">
+                                <span class="info-label">Interests</span>
+                                <span class="info-value">Web Dev · Backend · ML</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-details">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">dev18sep@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fa-solid fa-circle-check"></i></div>
+                            <div class="info-details">
+                                <span class="info-label">Status</span>
+                                <span class="info-value available">Open to Internships</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+       SKILLS SECTION
+  ======================== -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Tech Stack</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Languages, frameworks, and tools I work with</p>
+            </div>
+
+            <div class="skills-tabs">
+                <button class="skill-tab active" data-target="all">All</button>
+                <button class="skill-tab" data-target="languages">Languages</button>
+                <button class="skill-tab" data-target="web">Web</button>
+                <button class="skill-tab" data-target="databases">Databases</button>
+                <button class="skill-tab" data-target="tools">Tools</button>
+                <button class="skill-tab" data-target="concepts">Concepts</button>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Languages -->
+                <div class="skill-item reveal" data-category="languages">
+                    <div class="skill-header">
+                        <div class="skill-icon lang-icon"><i class="fa-solid fa-code"></i></div>
+                        <span class="skill-name">C++</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="75"></div>
+                    </div>
+                </div>
+                <div class="skill-item reveal" data-category="languages">
+                    <div class="skill-header">
+                        <div class="skill-icon py-icon"><i class="fa-brands fa-python"></i></div>
+                        <span class="skill-name">Python</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="80"></div>
+                    </div>
+                </div>
+                <div class="skill-item reveal" data-category="languages web">
+                    <div class="skill-header">
+                        <div class="skill-icon js-icon"><i class="fa-brands fa-js"></i></div>
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="70"></div>
+                    </div>
+                </div>
+                <div class="skill-item reveal" data-category="languages databases">
+                    <div class="skill-header">
+                        <div class="skill-icon sql-icon"><i class="fa-solid fa-database"></i></div>
+                        <span class="skill-name">SQL</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="65"></div>
+                    </div>
+                </div>
+                <!-- Web -->
+                <div class="skill-item reveal" data-category="web">
+                    <div class="skill-header">
+                        <div class="skill-icon html-icon"><i class="fa-brands fa-html5"></i></div>
+                        <span class="skill-name">HTML5</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="90"></div>
+                    </div>
+                </div>
+                <div class="skill-item reveal" data-category="web">
+                    <div class="skill-header">
+                        <div class="skill-icon css-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                        <span class="skill-name">CSS3</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="85"></div>
+                    </div>
+                </div>
+                <div class="skill-item reveal" data-category="web">
+                    <div class="skill-header">
+                        <div class="skill-icon node-icon"><i class="fa-brands fa-node-js"></i></div>
+                        <span class="skill-name">Node.js</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="65"></div>
+                    </div>
+                </div>
+                <div class="skill-item reveal" data-category="web">
+                    <div class="skill-header">
+                        <div class="skill-icon express-icon"><i class="fa-solid fa-server"></i></div>
+                        <span class="skill-name">Express.js</span>
+                        <span class="skill-percent">60%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="60"></div>
+                    </div>
+                </div>
+                <!-- Databases -->
+                <div class="skill-item reveal" data-category="databases">
+                    <div class="skill-header">
+                        <div class="skill-icon mongo-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <span class="skill-name">MongoDB</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="65"></div>
+                    </div>
+                </div>
+                <div class="skill-item reveal" data-category="databases">
+                    <div class="skill-header">
+                        <div class="skill-icon mysql-icon"><i class="fa-solid fa-database"></i></div>
+                        <span class="skill-name">MySQL</span>
+                        <span class="skill-percent">60%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="60"></div>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="skill-item reveal" data-category="tools">
+                    <div class="skill-header">
+                        <div class="skill-icon git-icon"><i class="fa-brands fa-git-alt"></i></div>
+                        <span class="skill-name">Git</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="75"></div>
+                    </div>
+                </div>
+                <div class="skill-item reveal" data-category="tools">
+                    <div class="skill-header">
+                        <div class="skill-icon gh-icon"><i class="fa-brands fa-github"></i></div>
+                        <span class="skill-name">GitHub</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="75"></div>
+                    </div>
+                </div>
+                <!-- Concepts -->
+                <div class="skill-item reveal" data-category="concepts">
+                    <div class="skill-header">
+                        <div class="skill-icon dsa-icon"><i class="fa-solid fa-sitemap"></i></div>
+                        <span class="skill-name">Data Structures</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="70"></div>
+                    </div>
+                </div>
+                <div class="skill-item reveal" data-category="concepts">
+                    <div class="skill-header">
+                        <div class="skill-icon algo-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                        <span class="skill-name">Algorithms</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="65"></div>
+                    </div>
+                </div>
+                <div class="skill-item reveal" data-category="concepts">
+                    <div class="skill-header">
+                        <div class="skill-icon api-icon"><i class="fa-solid fa-plug"></i></div>
+                        <span class="skill-name">REST APIs</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="70"></div>
+                    </div>
+                </div>
+                <div class="skill-item reveal" data-category="concepts">
+                    <div class="skill-header">
+                        <div class="skill-icon ml-icon"><i class="fa-solid fa-brain"></i></div>
+                        <span class="skill-name">Machine Learning</span>
+                        <span class="skill-percent">55%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="55"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+       PROJECTS SECTION
+  ======================== -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">Things I've built and learned from</p>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card reveal" data-filter="ml">
+                    <div class="card-top">
+                        <div class="project-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="card-link" title="GitHub" aria-label="GitHub Repository"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="#" class="card-link" title="Live Demo" aria-label="Live Demo"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Early Detection of Diabetes</h3>
+                    <p class="project-desc">
+                        A machine learning project that predicts diabetes risk using patient medical data and predictive
+                        analytics
+                        techniques. Includes data preprocessing, model training, and accuracy evaluation.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Scikit-learn</span>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card reveal" data-filter="web">
+                    <div class="card-top">
+                        <div class="project-icon">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="card-link" title="GitHub" aria-label="GitHub Repository"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="#" class="card-link" title="Live Demo" aria-label="Live Demo"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Developer Portfolio Website</h3>
+                    <p class="project-desc">
+                        Personal portfolio website showcasing projects, skills, and learning journey. Built with pure
+                        HTML, CSS, and
+                        JavaScript with dark mode support and responsive design.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card reveal" data-filter="backend">
+                    <div class="card-top">
+                        <div class="project-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <div class="card-links">
+                            <a href="#" class="card-link" title="GitHub" aria-label="GitHub Repository"><i
+                                    class="fa-brands fa-github"></i></a>
+                            <a href="#" class="card-link" title="Live Demo" aria-label="Live Demo"><i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">CRUD Web Application</h3>
+                    <p class="project-desc">
+                        A full-featured web application demonstrating CRUD operations with a RESTful backend API.
+                        Features user
+                        authentication, data validation, and a clean responsive frontend.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">REST API</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="projects-footer">
+                <a href="https://github.com/dev18sep-del" target="_blank" rel="noopener" class="btn-outline">
+                    View All on GitHub <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+       EXPERIENCE / TIMELINE
+  ======================== -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Learning Timeline</h2>
+                <p class="section-subtitle">How I've grown as a developer</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content left">
+                        <span class="timeline-year">2023</span>
+                        <h3>Started BTech in Computer Science</h3>
+                        <p>Began university education. Dived deep into programming fundamentals, C++, data structures,
+                            algorithms,
+                            and discrete mathematics.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">C++</span><span class="tag">DSA</span><span class="tag">Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content right">
+                        <span class="timeline-year">2024</span>
+                        <h3>Built First Web Development Projects</h3>
+                        <p>Learned HTML, CSS, and JavaScript. Built my first web projects and started exploring backend
+                            development
+                            with Node.js and MongoDB.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span
+                                class="tag">Node.js</span><span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-content left">
+                        <span class="timeline-year">2025</span>
+                        <h3>Exploring Backend & Machine Learning</h3>
+                        <p>Deepened backend knowledge with Express.js and REST APIs. Started exploring ML — built a
+                            diabetes
+                            prediction model using Python and Scikit-learn.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Express.js</span><span class="tag">Python</span><span
+                                class="tag">ML</span><span class="tag">REST API</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot future"></div>
+                    <div class="timeline-content right future-card">
+                        <span class="timeline-year">Future</span>
+                        <h3>Software Engineer / Full Stack Developer</h3>
+                        <p>Goal: join a product company or startup as a software engineer, contribute to open source,
+                            and continue
+                            building impactful applications.</p>
+                        <div class="timeline-tags">
+                            <span class="tag">Full Stack</span><span class="tag">Open Source</span><span
+                                class="tag">Career</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+       CERTIFICATIONS SECTION
+  ======================== -->
+    <section class="section certifications" id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Credentials</span>
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-subtitle">Courses and certifications I've completed</p>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card reveal">
+                    <div class="cert-platform coursera">Coursera</div>
+                    <h3 class="cert-title">Machine Learning Specialization</h3>
+                    <p class="cert-desc">Supervised & unsupervised learning, ML algorithms, and practical implementation
+                        using
+                        Python.</p>
+                    <div class="cert-footer">
+                        <div class="cert-skills">
+                            <span class="tag">Python</span><span class="tag">ML</span><span class="tag">Neural
+                                Nets</span>
+                        </div>
+                        <span class="cert-date">2024</span>
+                    </div>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-platform udemy">Udemy</div>
+                    <h3 class="cert-title">The Complete Web Developer Bootcamp</h3>
+                    <p class="cert-desc">Full stack web development covering HTML, CSS, JavaScript, Node.js, MongoDB,
+                        and REST
+                        APIs.</p>
+                    <div class="cert-footer">
+                        <div class="cert-skills">
+                            <span class="tag">HTML/CSS</span><span class="tag">JS</span><span class="tag">Node.js</span>
+                        </div>
+                        <span class="cert-date">2024</span>
+                    </div>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-platform nptel">NPTEL</div>
+                    <h3 class="cert-title">Data Structures & Algorithms</h3>
+                    <p class="cert-desc">Comprehensive course on DSA fundamentals, problem-solving techniques, and
+                        competitive
+                        programming.</p>
+                    <div class="cert-footer">
+                        <div class="cert-skills">
+                            <span class="tag">C++</span><span class="tag">DSA</span><span class="tag">Problem
+                                Solving</span>
+                        </div>
+                        <span class="cert-date">2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+       GITHUB SECTION
+  ======================== -->
+    <section class="section github-section" id="github">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Open Source</span>
+                <h2 class="section-title">GitHub Activity</h2>
+                <p class="section-subtitle">My open source contributions and repositories</p>
+            </div>
+            <div class="github-profile-card reveal">
+                <div class="github-avatar">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="github-info">
+                    <h3 id="gh-name">@dev18sep-del</h3>
+                    <p id="gh-bio">Computer Science Student | Open to collaborations</p>
+                    <div class="github-stats" id="gh-stats">
+                        <div class="gh-stat">
+                            <span class="gh-stat-num" id="gh-repos">—</span>
+                            <span class="gh-stat-label">Repositories</span>
+                        </div>
+                        <div class="gh-stat">
+                            <span class="gh-stat-num" id="gh-followers">—</span>
+                            <span class="gh-stat-label">Followers</span>
+                        </div>
+                        <div class="gh-stat">
+                            <span class="gh-stat-num" id="gh-following">—</span>
+                            <span class="gh-stat-label">Following</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/dev18sep-del" target="_blank" rel="noopener" class="btn-primary gh-btn">
+                        View GitHub Profile <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="repos-grid" id="reposGrid">
+                <!-- Repos loaded via JS or placeholders -->
+                <div class="repo-card reveal">
+                    <div class="repo-header">
+                        <i class="fa-solid fa-book"></i>
+                        <span class="repo-name">diabetes-prediction</span>
+                    </div>
+                    <p class="repo-desc">ML model for early diabetes detection using patient medical data.</p>
+                    <div class="repo-footer">
+                        <span class="repo-lang python-dot">Python</span>
+                        <span class="repo-stars"><i class="fa-solid fa-star"></i> 0</span>
+                    </div>
+                </div>
+                <div class="repo-card reveal">
+                    <div class="repo-header">
+                        <i class="fa-solid fa-book"></i>
+                        <span class="repo-name">portfolio-website</span>
+                    </div>
+                    <p class="repo-desc">Personal developer portfolio built with HTML, CSS, and JavaScript.</p>
+                    <div class="repo-footer">
+                        <span class="repo-lang html-dot">HTML</span>
+                        <span class="repo-stars"><i class="fa-solid fa-star"></i> 0</span>
+                    </div>
+                </div>
+                <div class="repo-card reveal">
+                    <div class="repo-header">
+                        <i class="fa-solid fa-book"></i>
+                        <span class="repo-name">crud-app</span>
+                    </div>
+                    <p class="repo-desc">Full CRUD web application with Node.js, Express.js, and MongoDB.</p>
+                    <div class="repo-footer">
+                        <span class="repo-lang js-dot">JavaScript</span>
+                        <span class="repo-stars"><i class="fa-solid fa-star"></i> 0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+       BLOG SECTION
+  ======================== -->
+    <section class="section blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Technical Writing</span>
+                <h2 class="section-title">Blog</h2>
+                <p class="section-subtitle">Thoughts, tutorials, and learning notes</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card reveal">
+                    <div class="blog-tag-top ml">Machine Learning</div>
+                    <h3 class="blog-title">Getting Started with Machine Learning in Python</h3>
+                    <p class="blog-excerpt">A beginner-friendly introduction to ML concepts — from linear regression to
+                        decision
+                        trees, using Scikit-learn and Pandas.</p>
+                    <div class="blog-footer">
+                        <span class="blog-date"><i class="fa-regular fa-calendar"></i> Coming Soon</span>
+                        <a href="#" class="blog-link">Read <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card reveal">
+                    <div class="blog-tag-top web">Web Development</div>
+                    <h3 class="blog-title">Building REST APIs with Node.js and Express</h3>
+                    <p class="blog-excerpt">Step-by-step guide to creating a production-ready REST API — from routing
+                        and
+                        controllers to MongoDB integration.</p>
+                    <div class="blog-footer">
+                        <span class="blog-date"><i class="fa-regular fa-calendar"></i> Coming Soon</span>
+                        <a href="#" class="blog-link">Read <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card reveal">
+                    <div class="blog-tag-top backend">Backend</div>
+                    <h3 class="blog-title">Understanding CRUD Operations in MongoDB</h3>
+                    <p class="blog-excerpt">A practical walkthrough of Create, Read, Update, and Delete operations in
+                        MongoDB with
+                        real code examples.</p>
+                    <div class="blog-footer">
+                        <span class="blog-date"><i class="fa-regular fa-calendar"></i> Coming Soon</span>
+                        <a href="#" class="blog-link">Read <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+       CONTACT SECTION
+  ======================== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-subtitle">Have a project, internship offer, or just want to talk? I'd love to hear
+                    from you.
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new opportunities, interesting projects, or simply having a tech
+                        conversation.</p>
+                    <div class="contact-links">
+                        <a href="mailto:dev18sep@gmail.com" class="contact-link-item">
+                            <div class="contact-link-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <span class="cl-label">Email</span>
+                                <span class="cl-value">dev18sep@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/dev18sep-del" target="_blank" rel="noopener"
+                            class="contact-link-item">
+                            <div class="contact-link-icon"><i class="fa-brands fa-github"></i></div>
+                            <div>
+                                <span class="cl-label">GitHub</span>
+                                <span class="cl-value">github.com/dev18sep-del</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/devkumar-patel-7444433b5/" target="_blank" rel="noopener"
+                            class="contact-link-item">
+                            <div class="contact-link-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div>
+                                <span class="cl-label">LinkedIn</span>
+                                <span class="cl-value">linkedin.com/in/devkumar-patel-7444433b5/</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-container reveal">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactName">Name</label>
+                                <input type="text" id="contactName" name="name" placeholder="Your name"
+                                    autocomplete="name" />
+                                <span class="form-error" id="nameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" id="contactEmail" name="email" placeholder="your@email.com"
+                                    autocomplete="email" />
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" name="subject"
+                                placeholder="e.g. Internship Inquiry" />
+                            <span class="form-error" id="subjectError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message</label>
+                            <textarea id="contactMessage" name="message" rows="5"
+                                placeholder="Write your message here..."></textarea>
+                            <span class="form-error" id="messageError"></span>
+                        </div>
+                        <button type="submit" class="btn-primary form-submit" id="submitBtn">
+                            <span id="submitText">Send Message</span>
+                            <i class="fa-solid fa-paper-plane" id="submitIcon"></i>
+                        </button>
+                        <div class="form-success" id="formSuccess">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Message sent! I'll get back to you soon.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================
+       FOOTER
+  ======================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-logo">
+                        <span class="logo-bracket">&lt;</span>Dev<span class="logo-dot">.</span><span
+                            class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p>Computer Science Student & Aspiring Software Engineer. Building things that matter.</p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/dev18sep-del" target="_blank" rel="noopener" aria-label="GitHub"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/devkumar-patel-7444433b5/" target="_blank" rel="noopener"
+                            aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:dev18sep@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Projects</h4>
+                    <ul>
+                        <li><a href="#">Diabetes Prediction</a></li>
+                        <li><a href="#">Portfolio Website</a></li>
+                        <li><a href="#">CRUD App</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Dev Patel. All rights reserved.</p>
+                <p>Designed & Built by Dev Patel</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

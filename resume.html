@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Patel — Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        /* ================================
+       RESUME — Dev Patel
+       ATS-friendly + print-ready
+    ================================ */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --accent: #1a56db;
+            --text: #111827;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+            --bg: #ffffff;
+            --tag-bg: #eff6ff;
+            --tag-color: #1d4ed8;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f3f4f6;
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        /* ================================
+       SCREEN TOOLBAR (hidden on print)
+    ================================ */
+        .toolbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 52px;
+            background: #1e293b;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            z-index: 100;
+            gap: 12px;
+        }
+
+        .toolbar-brand {
+            color: #e2e8f0;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toolbar-brand span {
+            color: #60a5fa;
+        }
+
+        .toolbar-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-print,
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 7px 18px;
+            border-radius: 6px;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+
+        .btn-print {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn-print:hover {
+            background: #1e40af;
+        }
+
+        .btn-back {
+            background: #334155;
+            color: #e2e8f0;
+        }
+
+        .btn-back:hover {
+            background: #475569;
+        }
+
+        /* ================================
+       PAGE WRAPPER
+    ================================ */
+        .page-wrapper {
+            margin-top: 52px;
+            padding: 32px 20px 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* ================================
+       RESUME PAPER
+    ================================ */
+        .resume {
+            width: 100%;
+            max-width: 860px;
+            background: var(--bg);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        /* ================================
+       HEADER
+    ================================ */
+        .resume-header {
+            padding: 36px 48px 28px;
+            border-bottom: 2px solid var(--accent);
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .header-left h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .header-left .headline {
+            font-size: 0.9375rem;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .header-left .tagline {
+            font-size: 0.8125rem;
+            color: var(--muted);
+            max-width: 420px;
+            line-height: 1.6;
+        }
+
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            align-items: flex-end;
+            flex-shrink: 0;
+            min-width: 210px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        .contact-item svg {
+            width: 13px;
+            height: 13px;
+            flex-shrink: 0;
+            color: var(--accent);
+        }
+
+        .contact-item a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        /* ================================
+       BODY
+    ================================ */
+        .resume-body {
+            display: grid;
+            grid-template-columns: 1fr 260px;
+            gap: 0;
+        }
+
+        /* ================================
+       MAIN COLUMN (LEFT)
+    ================================ */
+        .main-col {
+            padding: 28px 36px 36px 48px;
+            border-right: 1px solid var(--border);
+        }
+
+        /* ================================
+       SIDE COLUMN (RIGHT)
+    ================================ */
+        .side-col {
+            padding: 28px 32px 36px 28px;
+            background: #fafafa;
+        }
+
+        /* ================================
+       SECTIONS
+    ================================ */
+        .section {
+            margin-bottom: 26px;
+        }
+
+        .section-title {
+            font-size: 0.6875rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            border-bottom: 1.5px solid var(--border);
+            padding-bottom: 6px;
+            margin-bottom: 16px;
+        }
+
+        /* ================================
+       EXPERIENCE ENTRY
+    ================================ */
+        .entry {
+            margin-bottom: 18px;
+        }
+
+        .entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .entry-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 3px;
+        }
+
+        .entry-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .entry-date {
+            font-size: 0.75rem;
+            color: var(--muted);
+            white-space: nowrap;
+            flex-shrink: 0;
+            font-weight: 500;
+        }
+
+        .entry-org {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        .entry-desc {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .entry-desc li {
+            font-size: 0.8125rem;
+            color: #374151;
+            padding-left: 14px;
+            position: relative;
+            line-height: 1.55;
+        }
+
+        .entry-desc li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 0.7rem;
+            top: 1px;
+        }
+
+        /* ================================
+       PROJECT ENTRY
+    ================================ */
+        .project-entry {
+            margin-bottom: 16px;
+            padding: 14px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: border-color 0.15s;
+        }
+
+        .project-entry:hover {
+            border-color: #c7d7f5;
+        }
+
+        .project-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 5px;
+        }
+
+        .project-name {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .project-link {
+            font-size: 0.75rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-desc {
+            font-size: 0.8rem;
+            color: #374151;
+            margin-bottom: 8px;
+            line-height: 1.55;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            background: var(--tag-bg);
+            color: var(--tag-color);
+            border: 1px solid #bfdbfe;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        /* ================================
+       SKILLS (Side)
+    ================================ */
+        .skill-group {
+            margin-bottom: 16px;
+        }
+
+        .skill-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-group-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 7px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .skill-pill {
+            display: inline-block;
+            padding: 3px 9px;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        /* ================================
+       EDUCATION (Side)
+    ================================ */
+        .edu-entry {
+            margin-bottom: 14px;
+        }
+
+        .edu-degree {
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+
+        .edu-school {
+            font-size: 0.78rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .edu-detail {
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+
+        /* ================================
+       CERTIFICATIONS (Side)
+    ================================ */
+        .cert-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .cert-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .cert-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 6px;
+        }
+
+        .cert-name {
+            font-size: 0.79rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1px;
+        }
+
+        .cert-platform {
+            font-size: 0.72rem;
+            color: var(--muted);
+        }
+
+        /* ================================
+       LANGUAGES & INTERESTS
+    ================================ */
+        .list-items {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .list-item {
+            font-size: 0.8rem;
+            color: #374151;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .list-item::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: var(--accent);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ================================
+       SUMMARY
+    ================================ */
+        .summary-text {
+            font-size: 0.8125rem;
+            color: #374151;
+            line-height: 1.65;
+        }
+
+        /* ================================
+       ACHIEVEMENTS
+    ================================ */
+        .achievement-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.8125rem;
+            color: #374151;
+            line-height: 1.55;
+        }
+
+        .achievement-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .ach-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--tag-bg);
+            border: 1px solid #bfdbfe;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.65rem;
+            color: var(--accent);
+            font-weight: 800;
+            margin-top: 0px;
+        }
+
+        /* ================================
+       PRINT STYLES
+    ================================ */
+        @media print {
+            body {
+                background: white;
+                font-size: 12.5px;
+            }
+
+            .toolbar {
+                display: none;
+            }
+
+            .page-wrapper {
+                margin-top: 0;
+                padding: 0;
+            }
+
+            .resume {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+            }
+
+            .project-entry:hover {
+                border-color: var(--border);
+            }
+
+            a {
+                color: inherit !important;
+            }
+
+            @page {
+                margin: 14mm 14mm 14mm 14mm;
+                size: A4;
+            }
+        }
+
+        /* ================================
+       RESPONSIVE
+    ================================ */
+        @media (max-width: 720px) {
+            .resume-header {
+                flex-direction: column;
+                padding: 24px;
+            }
+
+            .header-right {
+                align-items: flex-start;
+            }
+
+            .resume-body {
+                grid-template-columns: 1fr;
+            }
+
+            .main-col {
+                padding: 20px 24px;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .side-col {
+                padding: 20px 24px;
+            }
+
+            .toolbar {
+                padding: 0 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ========================
+       SCREEN TOOLBAR
+  ======================== -->
+    <div class="toolbar">
+        <div class="toolbar-brand">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+            </svg>
+            Dev Patel &mdash; <span>Resume 2026</span>
+        </div>
+        <div class="toolbar-actions">
+            <a href="index.html" class="btn-back">← Back to Portfolio</a>
+            <button class="btn-print" onclick="window.print()">⬇ Download / Print PDF</button>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <div class="resume">
+
+            <!-- ========================
+           HEADER
+      ======================== -->
+            <header class="resume-header">
+                <div class="header-left">
+                    <h1>Dev Patel</h1>
+                    <div class="headline">Computer Science Student &amp; Aspiring Software Engineer</div>
+                    <div class="tagline">
+                        BTech CS student (2023–2027) with hands-on experience in web development, backend systems, and
+                        machine learning. Passionate about building scalable, impactful applications.
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,12 2,6" />
+                        </svg>
+                        <a href="mailto:dev18sep@gmail.com">dev18sep@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                        <a href="https://github.com/dev18sep-del" target="_blank">github.com/devpatel</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        <a href="https://www.linkedin.com/in/devkumar-patel-7444433b5/"
+                            target="_blank">linkedin.com/in/devkumar-patel-7444433b5/</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        India
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        devpatel.dev &nbsp;·&nbsp; Portfolio
+                    </div>
+                </div>
+            </header>
+
+            <!-- ========================
+           RESUME BODY
+      ======================== -->
+            <div class="resume-body">
+
+                <!-- ========================
+             MAIN COLUMN (LEFT)
+        ======================== -->
+                <div class="main-col">
+
+                    <!-- Professional Summary -->
+                    <div class="section">
+                        <div class="section-title">Professional Summary</div>
+                        <p class="summary-text">
+                            Motivated Computer Science student with a strong foundation in software engineering
+                            principles, web development, and machine learning. Experienced in building full-stack web
+                            applications using Node.js, Express.js, and MongoDB, and developing predictive ML models
+                            using Python. Seeking internship or entry-level opportunities where I can contribute to
+                            real-world engineering problems, grow technically, and deliver impactful software.
+                        </p>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="section">
+                        <div class="section-title">Education</div>
+                        <div class="entry">
+                            <div class="entry-header">
+                                <div class="entry-title">Bachelor of Technology — Computer Science &amp; Engineering
+                                </div>
+                                <div class="entry-date">2023 – 2027</div>
+                            </div>
+                            <div class="entry-org">Private University, India</div>
+                            <ul class="entry-desc">
+                                <li>Relevant Coursework: Data Structures &amp; Algorithms, DBMS, Operating Systems,
+                                    Computer Networks, Discrete Mathematics, Object-Oriented Programming</li>
+                                <li>Active member of the university coding club; participated in inter-college
+                                    hackathons</li>
+                                <li>CGPA: [Your CGPA] / 10.0</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Projects -->
+                    <div class="section">
+                        <div class="section-title">Projects</div>
+
+                        <div class="project-entry">
+                            <div class="project-header">
+                                <div class="project-name">🩺 Early Detection of Diabetes via Predictive Analytics</div>
+                                <a href="https://github.com/dev18sep-del/diabetes-prediction" class="project-link"
+                                    target="_blank">GitHub ↗</a>
+                            </div>
+                            <div class="project-desc">
+                                Built a machine learning classification model to predict diabetes risk using the PIMA
+                                Indian Diabetes Dataset. Applied data preprocessing, feature engineering, hyperparameter
+                                tuning, and model evaluation using accuracy, precision, and recall metrics. Achieved 82%
+                                accuracy with a Random Forest classifier.
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">NumPy</span>
+                                <span class="tech-tag">Matplotlib</span>
+                                <span class="tech-tag">Jupyter Notebook</span>
+                            </div>
+                        </div>
+
+                        <div class="project-entry">
+                            <div class="project-header">
+                                <div class="project-name">🗂️ Full-Stack CRUD Web Application</div>
+                                <a href="https://github.com/dev18sep-del/crud-app" class="project-link"
+                                    target="_blank">GitHub ↗</a>
+                            </div>
+                            <div class="project-desc">
+                                Developed a full-featured task management web application with user authentication,
+                                RESTful API, and CRUD operations. Implemented JWT-based auth, data validation with
+                                Mongoose schemas, and a clean responsive frontend. Deployed locally and tested with
+                                Postman.
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Mongoose</span>
+                                <span class="tech-tag">JWT</span>
+                                <span class="tech-tag">REST API</span>
+                                <span class="tech-tag">HTML/CSS/JS</span>
+                            </div>
+                        </div>
+
+                        <div class="project-entry">
+                            <div class="project-header">
+                                <div class="project-name">🌐 Developer Portfolio Website</div>
+                                <a href="https://github.com/dev18sep-del/portfolio" class="project-link"
+                                    target="_blank">GitHub ↗</a>
+                            </div>
+                            <div class="project-desc">
+                                Designed and built a fully responsive personal portfolio website with dark mode toggle,
+                                animated skill bars, scroll reveal, typewriter effect, project filtering, and a
+                                validated contact form. Zero frameworks — vanilla HTML, CSS, and JavaScript.
+                            </div>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Responsive Design</span>
+                                <span class="tech-tag">DOM API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience / Internships -->
+                    <div class="section">
+                        <div class="section-title">Experience &amp; Learning</div>
+                        <div class="entry">
+                            <div class="entry-header">
+                                <div class="entry-title">Self-Directed Learning — Web &amp; Backend Development</div>
+                                <div class="entry-date">2023 – Present</div>
+                            </div>
+                            <div class="entry-org">Udemy / YouTube / Personal Projects</div>
+                            <ul class="entry-desc">
+                                <li>Completed full-stack development bootcamp covering HTML/CSS/JS, Node.js, Express.js,
+                                    MongoDB, and REST APIs (Udemy)</li>
+                                <li>Built 3+ real-world projects applying backend CRUD, API design, and database
+                                    integration skills</li>
+                                <li>Practiced 100+ DSA problems on LeetCode focusing on arrays, strings, trees, and
+                                    graphs</li>
+                            </ul>
+                        </div>
+                        <div class="entry">
+                            <div class="entry-header">
+                                <div class="entry-title">Machine Learning — Coursera Specialization</div>
+                                <div class="entry-date">2024</div>
+                            </div>
+                            <div class="entry-org">DeepLearning.AI &amp; Stanford Online / Coursera</div>
+                            <ul class="entry-desc">
+                                <li>Completed Andrew Ng's Machine Learning Specialization covering regression,
+                                    classification, clustering, and neural networks</li>
+                                <li>Applied learning to build the Diabetes Prediction project using Scikit-learn and
+                                    real-world medical dataset</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Achievements -->
+                    <div class="section">
+                        <div class="section-title">Achievements</div>
+                        <div class="achievement-item">
+                            <div class="ach-icon">★</div>
+                            Completed Machine Learning Specialization (Coursera) — Andrew Ng / Stanford
+                        </div>
+                        <div class="achievement-item">
+                            <div class="ach-icon">★</div>
+                            Built and deployed 3 end-to-end projects (ML model, REST API app, portfolio) within first 2
+                            years of BTech
+                        </div>
+                        <div class="achievement-item">
+                            <div class="ach-icon">★</div>
+                            Solved 100+ algorithmic problems on LeetCode (Arrays, Strings, DP, Trees)
+                        </div>
+                        <div class="achievement-item">
+                            <div class="ach-icon">★</div>
+                            NPTEL DSA certification with [Score]% — IIT faculty graded
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ========================
+             SIDE COLUMN (RIGHT)
+        ======================== -->
+                <div class="side-col">
+
+                    <!-- Technical Skills -->
+                    <div class="section">
+                        <div class="section-title">Technical Skills</div>
+
+                        <div class="skill-group">
+                            <div class="skill-group-title">Languages</div>
+                            <div class="skill-tags">
+                                <span class="skill-pill">Python</span>
+                                <span class="skill-pill">C++</span>
+                                <span class="skill-pill">JavaScript</span>
+                                <span class="skill-pill">SQL</span>
+                                <span class="skill-pill">HTML5</span>
+                                <span class="skill-pill">CSS3</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <div class="skill-group-title">Frameworks &amp; Libraries</div>
+                            <div class="skill-tags">
+                                <span class="skill-pill">Node.js</span>
+                                <span class="skill-pill">Express.js</span>
+                                <span class="skill-pill">Scikit-learn</span>
+                                <span class="skill-pill">Pandas</span>
+                                <span class="skill-pill">NumPy</span>
+                                <span class="skill-pill">Matplotlib</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <div class="skill-group-title">Databases</div>
+                            <div class="skill-tags">
+                                <span class="skill-pill">MongoDB</span>
+                                <span class="skill-pill">MySQL</span>
+                                <span class="skill-pill">Mongoose</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <div class="skill-group-title">Tools &amp; Platforms</div>
+                            <div class="skill-tags">
+                                <span class="skill-pill">Git</span>
+                                <span class="skill-pill">GitHub</span>
+                                <span class="skill-pill">VS Code</span>
+                                <span class="skill-pill">Postman</span>
+                                <span class="skill-pill">Jupyter</span>
+                                <span class="skill-pill">Linux CLI</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-group">
+                            <div class="skill-group-title">CS Concepts</div>
+                            <div class="skill-tags">
+                                <span class="skill-pill">OOP</span>
+                                <span class="skill-pill">REST APIs</span>
+                                <span class="skill-pill">CRUD</span>
+                                <span class="skill-pill">DSA</span>
+                                <span class="skill-pill">DBMS</span>
+                                <span class="skill-pill">OS</span>
+                                <span class="skill-pill">Networking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="section">
+                        <div class="section-title">Certifications</div>
+
+                        <div class="cert-item">
+                            <div class="cert-dot"></div>
+                            <div>
+                                <div class="cert-name">Machine Learning Specialization</div>
+                                <div class="cert-platform">Coursera · DeepLearning.AI · 2024</div>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-dot"></div>
+                            <div>
+                                <div class="cert-name">The Complete Web Developer Bootcamp</div>
+                                <div class="cert-platform">Udemy · 2024</div>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-dot"></div>
+                            <div>
+                                <div class="cert-name">Data Structures &amp; Algorithms</div>
+                                <div class="cert-platform">NPTEL · IIT · 2023</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills -->
+                    <div class="section">
+                        <div class="section-title">Core Strengths</div>
+                        <div class="list-items">
+                            <div class="list-item">Problem-Solving &amp; Analytical Thinking</div>
+                            <div class="list-item">Self-Directed Learning</div>
+                            <div class="list-item">Clear Technical Communication</div>
+                            <div class="list-item">Attention to Detail</div>
+                            <div class="list-item">Team Collaboration</div>
+                            <div class="list-item">Fast Learner &amp; Adaptable</div>
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="section">
+                        <div class="section-title">Languages</div>
+                        <div class="list-items">
+                            <div class="list-item">English — Professional Working</div>
+                            <div class="list-item">Hindi — Fluent</div>
+                            <div class="list-item">Gujarati — Native</div>
+                        </div>
+                    </div>
+
+                    <!-- Interests -->
+                    <div class="section">
+                        <div class="section-title">Interests</div>
+                        <div class="list-items">
+                            <div class="list-item">Backend Engineering</div>
+                            <div class="list-item">Machine Learning &amp; AI</div>
+                            <div class="list-item">Open Source Contribution</div>
+                            <div class="list-item">Competitive Programming</div>
+                            <div class="list-item">Technical Blogging</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- / resume-body -->
+
+        </div><!-- / resume -->
+    </div><!-- / page-wrapper -->
+
+</body>
+
+</html>
