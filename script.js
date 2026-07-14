@@ -104,7 +104,7 @@ mobileLinks.forEach(link => {
 ======================== */
 const typewriterEl = document.getElementById('typewriter');
 const phrases = [
-    'Aspiring Software Engineer',
+    'Aspiring AI/ML Engineer',
     'Web Developer',
     'Backend Developer',
     'ML Enthusiast',
