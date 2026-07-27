@@ -730,14 +730,15 @@ ul {
 .image-wrapper {
     position: relative;
     width: 100%;
-    max-width: 440px;
+    max-width: 540px; /* Increased from 440px */
+    margin-left: -40px; /* Slide left */
     animation: float 4s ease-in-out infinite;
 }
 
 .image-wrapper img,
 .image-wrapper spline-viewer {
     width: 100%;
-    height: 440px;
+    height: 540px; /* Increased from 440px */
     border-radius: var(--radius-lg);
     display: block;
     object-fit: cover;
